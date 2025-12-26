@@ -1,0 +1,181 @@
+.cover
+  height: 100vmin
+  display: flex
+  align-items: center
+  background: #0d0d0d
+  animation: coverBackgroundIn 8s ease-out
+
+  .content
+    width: 100%
+    height: auto
+    aspect-ratio: 3.8
+    display: flex
+    align-items: stretch
+    background: #eef0db
+    overflow: hidden
+    transform: translateY(1rem)
+    animation: contentDown 10s ease-in-out
+
+    .left
+      display: flex
+      flex-grow: 1
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      position: relative
+
+      .title
+        //position: absolute
+        top: 9vmax
+        font-size: 2vmax
+        font-weight: bold
+        animation: titleIn 3s ease-out
+
+      .tip
+        //position: absolute
+        top: 11.5vmax
+        font-size: 0.8vmax
+        margin-top: 0.2vmax
+        animation: tipIn 3s ease-out
+
+      .buttons
+        position: absolute
+        top: 14vmax
+        display: flex
+        margin-top: 1.6vmax
+        animation: buttonsIn 4s ease-in-out
+
+        .button
+          margin: 0.6vmax
+          padding: 0.5vmax 1.2vmax
+          font-size: 0.7vmax
+          border-radius: 0.2vmax
+          cursor: pointer
+          user-select: none
+
+
+        .button:hover
+          box-shadow: 0 0 1.2vmax 0.6vmax #00000011
+
+
+        .quickStart
+          background: #000000
+          color: #ffffff
+
+
+        .browserExample
+          border: 1px solid #000000
+
+    .middle
+      height: 100%
+      aspect-ratio: 1
+
+    .right
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      position: relative
+
+      .title
+        width: 30vmax
+        font-size: 1.5vmax
+        font-weight: bold
+        margin-bottom: 1.4vmax
+        display: flex
+        align-items: center
+        justify-content: center
+        animation: textFadeIn 3s ease-out
+        transition: opacity 1s ease-in-out
+
+      .text
+        width: 23vmax
+        font-size: 0.8vmax
+        display: flex
+        align-items: center
+        justify-content: center
+        animation: textFadeIn 3s ease-out
+        transition: opacity 1s ease-in-out
+
+      &.fade-out
+        .Title, .TextHolder
+          opacity: 0
+
+      &.fade-in
+        .Title, .TextHolder
+          opacity: 1
+
+@keyframes coverBackgroundIn
+  0%
+    background: #000000
+
+  82%
+    background: #000000
+
+  100%
+    background: #0d0d0d
+
+@keyframes contentDown
+  0%
+    transform: translateY(0)
+
+  40%
+    transform: translateY(0)
+
+  100%
+    transform: translateY(1rem)
+
+@keyframes titleIn
+  from
+    opacity: 0
+    transform: translateY(2.5vmax)
+
+  to
+    opacity: 1
+    transform: translateY(0)
+
+
+@keyframes tipIn
+  from
+    opacity: 0
+    transform: translateY(2.5vmax)
+
+  to
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes buttonsIn
+  0%
+    transform: translateY(1vmax)
+    opacity: 0
+
+  90%
+    transform: translateY(1vmax)
+    opacity: 0
+
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+//@keyframes textIn
+//  0%
+//    clip-path: polygon(0 0, 0 0, 0 0)
+//
+//  28%
+//    clip-path: polygon(0 0, 0 0, 0 0)
+//
+//  58%
+//    clip-path: polygon(0 0, 18vmax 0, 0 18vmax)
+//
+//  100%
+//    clip-path: polygon(0 0, 18vmax 0, 0 18vmax)
+//
+//
+
+@keyframes textFadeIn
+  from
+    opacity: 0
+
+  to
+    opacity: 1

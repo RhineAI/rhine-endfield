@@ -1,6 +1,10 @@
 import styles from "./page.module.sass";
-import Center from "@/components/Center/Center";
+import Cover from "@/components/Cover/Cover";
 
 export default function Page() {
-  return <div className={styles.page}></div>;
+  return (
+    <div className={styles.page}>
+      <Cover />
+    </div>
+  );
 }

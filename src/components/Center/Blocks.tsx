@@ -1,19 +1,35 @@
-'use client'
+"use client";
 
-import {useEffect, useState} from "react";
-import "./Blocks.scss"
+import { useEffect, useState } from "react";
+import styles from "./Blocks.module.sass";
+import clsx from "clsx";
 
 export default function Blocks() {
   const sequenceOrder = [
     [[2, 2]], // 13
-    [[1, 2], [2, 1], [2, 3], [3, 2]], // 8, 12, 14, 18
-    [[2, 4], [3, 1]], // 15, 17
-    [[1, 0], [1, 4], [3, 0]], // 6, 10, 16
-    [[4, 0], [4, 3]], // 21
+    [
+      [1, 2],
+      [2, 1],
+      [2, 3],
+      [3, 2],
+    ], // 8, 12, 14, 18
+    [
+      [2, 4],
+      [3, 1],
+    ], // 15, 17
+    [
+      [1, 0],
+      [1, 4],
+      [3, 0],
+    ], // 6, 10, 16
+    [
+      [4, 0],
+      [4, 3],
+    ], // 21
   ];
 
   const [visibleBlocks, setVisibleBlocks] = useState<boolean[][]>(
-    [...Array(5)].map(() => Array(5).fill(false))
+    [...Array(5)].map(() => Array(5).fill(false)),
   );
 
   useEffect(() => {
@@ -24,7 +40,9 @@ export default function Blocks() {
         const currentBatch = sequenceOrder[orderIndex];
 
         setVisibleBlocks((prevVisibleBlocks) => {
-          let updatedBlocks: boolean[][] = prevVisibleBlocks.map((rowArr) => [...rowArr]);
+          let updatedBlocks: boolean[][] = prevVisibleBlocks.map((rowArr) => [
+            ...rowArr,
+          ]);
           currentBatch.forEach(([row, col]) => {
             updatedBlocks[row][col] = true;
           });
@@ -35,22 +53,22 @@ export default function Blocks() {
       } else {
         clearInterval(intervalId);
       }
-    }
-    execute()
+    };
+    execute();
     const intervalId = setInterval(execute, 1000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <div className="Blocks">
+    <div className={styles.blocks}>
       {visibleBlocks.map((row, i) =>
         row.map((isVisible, j) => (
           <div
             key={`${i}-${j}`}
-            className={`Block ${isVisible ? 'BlockShow Visible' : ''}`}
+            className={clsx(styles.block, isVisible ? styles.visible : null)}
           />
-        ))
+        )),
       )}
     </div>
   );
