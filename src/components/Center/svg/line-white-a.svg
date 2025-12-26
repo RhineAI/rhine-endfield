@@ -1,0 +1,35 @@
+<svg width="1024.000000" height="1024.000000" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="filter_4_3_dd" x="767.000000" y="-2.000000" width="30.000000" height="1034.000000"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                           result="hardAlpha"/>
+            <feOffset dx="0" dy="4"/>
+            <feGaussianBlur stdDeviation="1.33333"/>
+            <feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+        </filter>
+        <clipPath id="clip2_1">
+            <rect id="canvas" width="1024.000000" height="1024.000000" fill="white" fill-opacity="0"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip2_1)">
+        <g filter="url(#filter_3_4_dd)">
+            <path id="a"
+                  d="M411 1012.48L411 1012.5L411 1023.5L433 1023.5L433 1012.5L433 1012.48L433 287.96Q433.69 279.12 430.99 263.04Q427.41 241.69 418.92 216.48Q405.19 175.75 358.21 114.78L357.72 114.15L223.65 -15.9L208.34 -0.11L341.27 128.84Q385.59 186.47 398.07 223.51Q406.01 247.06 409.3 266.68Q411.6 280.44 411.04 286.48L411 286.99L411 1012.48Z"
+                  fill="#F4F1EC" fill-opacity="1.000000" fill-rule="evenodd"/>
+        </g>
+        <g>
+            <circle id="am" cx="422.000000" cy="512.000000" r="7.50000" fill="#000000" fill-opacity="1.000000"/>
+        </g>
+        <g>
+            <circle id="ab" cx="422.000000" cy="955.000000" r="7.50000" fill="#000000" fill-opacity="1.000000"/>
+        </g>
+        <text x="422" y="930" font-family="Arial" font-size="19px" font-weight="700" fill="black" text-anchor="middle" dominant-baseline="middle">
+            A
+        </text>
+    </g>
+</svg>

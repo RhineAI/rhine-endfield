@@ -1,0 +1,163 @@
+.Center {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  > * {
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 1;
+  }
+
+
+  .Circle {
+    border-radius: 50%;
+  }
+
+  .CircleA {
+    width:  105%;
+    height: 105%;
+    background: #cccfa6;
+    box-shadow: 0 0 2vmax 1.7vmax #cccfa6;
+    animation: fadeInScaleA 10s;
+  }
+
+  .CircleB {
+    width:  77%;
+    height: 77%;
+    background: #000000;
+    box-shadow: 0 0 3vmax 3vmax #000000;
+    animation: fadeInScaleA 10s;
+  }
+
+  .CircleC {
+    width:  13%;
+    height: 13%;
+    background: #000000;
+    box-shadow: 0 0 6.7vmax 7vmax #000000;
+    z-index: 1;
+    animation: fadeInScaleC 10s;
+  }
+
+  .Line {
+    z-index: 1;
+  }
+
+  .LineA {
+    animation: fadeInLineA 2s linear;
+  }
+
+  .LineB {
+    animation: fadeInLineB 2s linear;
+  }
+
+  .LineC {
+    animation: fadeInLineC 2s linear;
+  }
+
+  .LineD {
+    animation: fadeInLineD 0.3s linear;
+  }
+
+  .LineM {
+    animation: fadeInLineM 0.3s linear;
+  }
+}
+
+
+@keyframes fadeInLineA {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  90% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+@keyframes fadeInLineB {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  60% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+@keyframes fadeInLineC {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+@keyframes fadeInLineD {
+  0% {
+    clip-path: inset(40% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+@keyframes fadeInLineM {
+  0% {
+    clip-path: inset(0 0 50% 0);
+  }
+  70% {
+    clip-path: inset(0 0 10% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes fadeInScaleA {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInScaleC {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.7);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

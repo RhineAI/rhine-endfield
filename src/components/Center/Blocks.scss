@@ -1,0 +1,19 @@
+.Blocks {
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg) scale(0.7071);
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
+
+  .Block {
+    margin: 0.27rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .Visible {
+    background: #EEF0DB;
+    opacity: 1;
+  }
+}
